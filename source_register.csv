@@ -1,0 +1,5 @@
+Source name,URL,Owner/organisation,Format,Licence,Access method,Date accessed,Notes
+World Bank - Crop Production Index,https://api.worldbank.org/v2/country/UGA/indicator/AG.PRD.CROP.XD,World Bank,JSON (API),CC-BY 4.0,API (no key required),2026-10-07,Fetched via fetch_worldbank() in 01_collect.py
+Open-Meteo - Historical Weather,https://archive-api.open-meteo.com/v1/archive,Open-Meteo,JSON (API),CC-BY 4.0,API (no key required),2026-10-07,Precipitation and temperature for Kampala coords; fetched via fetch_weather()
+Our World in Data - Cereal Yield,https://ourworldindata.org/grapher/cereal-yield.csv,Our World in Data,CSV (static download),CC-BY 4.0,Direct CSV download,2026-10-07,Used as substitute after FAOSTAT API returned repeated HTTP 521 errors; fetched via fetch_owid()
+WFP Food Prices - Uganda,https://data.humdata.org/dataset/883929b1-521e-4834-97f5-0ccc2df75b89/resource/e082d683-cad5-4dcd-bf54-db76ae254d33/download/wfp_food_prices_uga.csv,World Food Programme (via HDX),CSV (static download),CC-BY-IGO 3.0,Direct CSV download,2026-10-07,Fetched via fetch_wfp_prices() with custom User-Agent header
