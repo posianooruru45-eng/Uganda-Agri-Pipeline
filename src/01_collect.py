@@ -45,7 +45,7 @@ def fetch_owid():
     # "cereal-yield" chart: cereal yield (kg per hectare) by country and year
     url = "https://ourworldindata.org/grapher/cereal-yield.csv"
     params = {
-        "country": "UGA",
+        "country": "~UGA",
         "time": "2015..2024",
         "csvType": "filtered",
     }
