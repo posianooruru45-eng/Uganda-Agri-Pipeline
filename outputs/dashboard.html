@@ -19,7 +19,9 @@
   .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 2rem; }
   .section h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #2c7a5b; border-bottom: 2px solid #2c7a5b; padding-bottom: 0.5rem; }
   .chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
-  .chart-placeholder { background: #f0f4f8; border: 2px dashed #ccc; border-radius: 8px; height: 200px; display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.9rem; }
+  .chart-card { background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; text-align: center; }
+  .chart-card img { max-width: 100%; height: auto; border-radius: 4px; }
+  .chart-caption { margin-top: 0.5rem; font-size: 0.85rem; color: #555; font-weight: 600; }
   table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
   th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e0e0e0; }
   th { background: #f8f9fa; font-weight: 600; color: #2c7a5b; }
@@ -138,21 +140,48 @@
   <div class="section">
     <h2>Charts & Visualizations</h2>
     <div class="chart-row">
-      <div class="chart-placeholder">01_price_distribution.png</div>
-      <div class="chart-placeholder">02_weather_distribution.png</div>
-      <div class="chart-placeholder">03_price_trend_by_commodity.png</div>
-      <div class="chart-placeholder">04_price_by_district.png</div>
+      <div class="chart-card">
+        <img src="charts/01_price_distribution.png" alt="Price Distribution">
+        <div class="chart-caption">01 — Price Distribution</div>
+      </div>
+      <div class="chart-card">
+        <img src="charts/02_weather_distribution.png" alt="Weather Distribution">
+        <div class="chart-caption">02 — Weather Distribution</div>
+      </div>
+      <div class="chart-card">
+        <img src="charts/03_price_trend_by_commodity.png" alt="Price Trend by Commodity">
+        <div class="chart-caption">03 — Price Trend by Commodity</div>
+      </div>
+      <div class="chart-card">
+        <img src="charts/04_price_by_district.png" alt="Price by District">
+        <div class="chart-caption">04 — Price by District</div>
+      </div>
     </div>
     <div class="chart-row">
-      <div class="chart-placeholder">05_residuals_vs_fitted.png</div>
-      <div class="chart-placeholder">06_qq_plot.png</div>
-      <div class="chart-placeholder">07_rainfall_vs_price.png</div>
-      <div class="chart-placeholder">08_price_by_season.png</div>
+      <div class="chart-card">
+        <img src="charts/05_residuals_vs_fitted.png" alt="Residuals vs Fitted">
+        <div class="chart-caption">05 — Residuals vs Fitted</div>
+      </div>
+      <div class="chart-card">
+        <img src="charts/06_qq_plot.png" alt="Q-Q Plot">
+        <div class="chart-caption">06 — Q-Q Plot</div>
+      </div>
+      <div class="chart-card">
+        <img src="charts/07_rainfall_vs_price.png" alt="Rainfall vs Price">
+        <div class="chart-caption">07 — Rainfall vs Price</div>
+      </div>
+      <div class="chart-card">
+        <img src="charts/08_price_by_season.png" alt="Price by Season">
+        <div class="chart-caption">08 — Price by Season</div>
+      </div>
     </div>
     <div class="chart-row">
-      <div class="chart-placeholder">09_correlation_heatmap.png</div>
+      <div class="chart-card">
+        <img src="charts/09_correlation_heatmap.png" alt="Correlation Heatmap">
+        <div class="chart-caption">09 — Correlation Heatmap</div>
+      </div>
     </div>
-    <p><em>Charts are saved as PNG files in <code>outputs/charts/</code>. Open them individually to view full resolution.</em></p>
+    <p><em>All 9 charts are embedded above. Original PNG files are also available in <code>outputs/charts/</code>.</em></p>
   </div>
 
   <div class="section">
