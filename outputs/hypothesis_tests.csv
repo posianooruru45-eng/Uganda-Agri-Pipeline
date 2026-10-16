@@ -1,0 +1,6 @@
+test,statistic,p_value,significant,interpretation
+Wet vs Dry season price difference,-0.5013,0.616178,False,"Wet season mean=2917.88, Dry season mean=2935.18"
+Rainfall vs price correlation (Pearson),0.0009,0.911838,False,r=0.001 (linear correlation)
+Rainfall vs price correlation (Spearman),0.0084,0.286975,False,rho=0.008 (rank correlation)
+Price differences across commodities (ANOVA),4073.5463,0.0,True,F=4073.55 across 37 commodities
+Price differences across districts (ANOVA),0.9726,0.460413,False,F=0.97 across 10 districts

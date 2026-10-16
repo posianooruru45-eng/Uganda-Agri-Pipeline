@@ -1,0 +1,25 @@
+{
+  "breusch_pagan": {
+    "statistic": 462.7227,
+    "p_value": 0.0,
+    "homoscedastic": "False"
+  },
+  "vif": [
+    {
+      "variable": "const",
+      "VIF": 1.0
+    },
+    {
+      "variable": "precipitation_mm",
+      "VIF": 1.2
+    },
+    {
+      "variable": "temperature_mean_c",
+      "VIF": 1.2
+    }
+  ],
+  "durbin_watson": {
+    "statistic": 1.7923,
+    "no_autocorrelation": "True"
+  }
+}

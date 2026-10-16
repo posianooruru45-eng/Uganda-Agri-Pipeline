@@ -1,0 +1,110 @@
+REGRESSION RESULTS — Phase 6: Analyze
+======================================================================
+
+Dependent variable: log(1 + price)
+Observations: 16179
+R-squared: 0.8889
+Adj R-squared: 0.8884
+F-statistic: 1740.99
+Prob (F-statistic): 0.000000
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              price_log   R-squared:                       0.889
+Model:                            OLS   Adj. R-squared:                  0.888
+Method:                 Least Squares   F-statistic:                     1741.
+Date:                Fri, 16 Oct 2026   Prob (F-statistic):               0.00
+Time:                        11:23:16   Log-Likelihood:                -2020.5
+No. Observations:               16179   AIC:                             4191.
+Df Residuals:                   16104   BIC:                             4768.
+Df Model:                          74                                         
+Covariance Type:            nonrobust                                         
+============================================================================================================
+                                               coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------
+Intercept                                    8.6479      0.063    137.038      0.000       8.524       8.772
+C(commodity)[T.Batteries]                   -0.9425      0.031    -30.721      0.000      -1.003      -0.882
+C(commodity)[T.Beans]                       -0.4606      0.023    -19.763      0.000      -0.506      -0.415
+C(commodity)[T.Cassava (fresh)]             -2.1027      0.025    -83.554      0.000      -2.152      -2.053
+C(commodity)[T.Cassava flour]               -1.0811      0.025    -44.008      0.000      -1.129      -1.033
+C(commodity)[T.Charcoal]                    -1.8772      0.026    -72.278      0.000      -1.928      -1.826
+C(commodity)[T.Exercise Book (48 pages)]    -2.2417      0.031    -72.956      0.000      -2.302      -2.181
+C(commodity)[T.Firewood]                    -2.8542      0.026   -110.153      0.000      -2.905      -2.803
+C(commodity)[T.Fish (dry)]                   0.2893      0.025     11.471      0.000       0.240       0.339
+C(commodity)[T.Hoe]                          0.2886      0.031      9.268      0.000       0.228       0.350
+C(commodity)[T.Jerrycan (20L)]               0.2621      0.030      8.719      0.000       0.203       0.321
+C(commodity)[T.Jerrycan (5L)]               -0.8055      0.030    -26.609      0.000      -0.865      -0.746
+C(commodity)[T.Laundry soap]                -0.1152      0.026     -4.452      0.000      -0.166      -0.064
+C(commodity)[T.Leafy vegetables]            -1.0978      0.025    -43.527      0.000      -1.147      -1.048
+C(commodity)[T.Maize]                       -1.6996      0.033    -51.679      0.000      -1.764      -1.635
+C(commodity)[T.Maize (white)]               -1.4126      0.023    -60.721      0.000      -1.458      -1.367
+C(commodity)[T.Maize flour]                 -0.7714      0.023    -33.164      0.000      -0.817      -0.726
+C(commodity)[T.Milk (fresh)]                -1.1849      0.025    -46.962      0.000      -1.234      -1.135
+C(commodity)[T.Millet]                      -0.6891      0.025    -28.041      0.000      -0.737      -0.641
+C(commodity)[T.Millet flour]                -0.2747      0.025    -11.001      0.000      -0.324      -0.226
+C(commodity)[T.Mug (plastic)]               -1.7171      0.030    -56.974      0.000      -1.776      -1.658
+C(commodity)[T.Nails]                        0.2567      0.032      8.126      0.000       0.195       0.319
+C(commodity)[T.Oil (vegetable)]              0.2409      0.023     10.355      0.000       0.195       0.286
+C(commodity)[T.Panga]                        0.2724      0.031      8.732      0.000       0.211       0.334
+C(commodity)[T.Pen]                         -2.2559      0.030    -74.331      0.000      -2.315      -2.196
+C(commodity)[T.Pencil]                      -3.2770      0.030   -107.490      0.000      -3.337      -3.217
+C(commodity)[T.Plate (plastic)]             -1.7111      0.030    -56.696      0.000      -1.770      -1.652
+C(commodity)[T.Pole]                         0.1752      0.032      5.469      0.000       0.112       0.238
+C(commodity)[T.Rice]                        -0.5375      0.046    -11.692      0.000      -0.628      -0.447
+C(commodity)[T.Rope]                        -1.4758      0.032    -46.349      0.000      -1.538      -1.413
+C(commodity)[T.Salt]                        -1.1256      0.025    -45.130      0.000      -1.174      -1.077
+C(commodity)[T.Sanitary pads]               -0.6842      0.026    -26.423      0.000      -0.735      -0.633
+C(commodity)[T.Serving spoon]               -0.9670      0.030    -31.851      0.000      -1.026      -0.907
+C(commodity)[T.Sorghum]                     -1.1299      0.023    -48.474      0.000      -1.176      -1.084
+C(commodity)[T.Torch]                       -1.6377      0.031    -53.041      0.000      -1.698      -1.577
+C(commodity)[T.Underwear]                   -0.7542      0.026    -29.051      0.000      -0.805      -0.703
+C(commodity)[T.Wooden mingle]               -1.6965      0.030    -56.130      0.000      -1.756      -1.637
+C(district)[T.Arua]                         -0.0525      0.030     -1.769      0.077      -0.111       0.006
+C(district)[T.Busia]                        -0.1661      0.020     -8.147      0.000      -0.206      -0.126
+C(district)[T.Fort Portal]                   0.1435      0.021      6.796      0.000       0.102       0.185
+C(district)[T.Gulu]                          0.1219      0.016      7.531      0.000       0.090       0.154
+C(district)[T.Hoima]                         0.0815      0.020      4.155      0.000       0.043       0.120
+C(district)[T.Iganga]                       -0.0368      0.017     -2.204      0.028      -0.070      -0.004
+C(district)[T.Isingiro]                     -0.0292      0.013     -2.314      0.021      -0.054      -0.004
+C(district)[T.Jinja]                         0.0768      0.020      3.898      0.000       0.038       0.115
+C(district)[T.Kabale]                        0.1012      0.053      1.901      0.057      -0.003       0.206
+C(district)[T.Kampala]                       0.1351      0.016      8.329      0.000       0.103       0.167
+C(district)[T.Kamwenge]                     -0.0241      0.012     -1.935      0.053      -0.048       0.000
+C(district)[T.Kapchorwa]                    -0.0076      0.016     -0.465      0.642      -0.039       0.024
+C(district)[T.Kasese]                        0.0398      0.020      2.008      0.045       0.001       0.079
+C(district)[T.Kikuube]                       0.0162      0.012      1.314      0.189      -0.008       0.040
+C(district)[T.Kiryandongo]                  -0.0203      0.013     -1.601      0.109      -0.045       0.005
+C(district)[T.Koboko]                       -0.0038      0.013     -0.303      0.762      -0.028       0.021
+C(district)[T.Kyegegwa]                     -0.0398      0.012     -3.206      0.001      -0.064      -0.015
+C(district)[T.Lamwo]                         0.0138      0.013      1.084      0.278      -0.011       0.039
+C(district)[T.Lira]                         -0.1164      0.016     -7.153      0.000      -0.148      -0.085
+C(district)[T.Masaka]                       -0.0025      0.022     -0.115      0.909      -0.046       0.041
+C(district)[T.Masindi]                       0.0477      0.019      2.466      0.014       0.010       0.086
+C(district)[T.Mbale]                         0.0476      0.017      2.791      0.005       0.014       0.081
+C(district)[T.Mbarara]                       0.1444      0.016      8.879      0.000       0.113       0.176
+C(district)[T.Moyo]                         -0.0711      0.012     -5.695      0.000      -0.096      -0.047
+C(district)[T.Mukono]                        0.2427      0.021     11.625      0.000       0.202       0.284
+C(district)[T.Soroti]                       -0.1294      0.020     -6.440      0.000      -0.169      -0.090
+C(district)[T.Terego]                       -0.0171      0.029     -0.590      0.555      -0.074       0.040
+C(district)[T.Tororo]                        0.0048      0.019      0.247      0.805      -0.033       0.043
+C(district)[T.Wakiso]                        0.1387      0.021      6.642      0.000       0.098       0.180
+C(district)[T.Yumbe]                        -0.0459      0.012     -3.675      0.000      -0.070      -0.021
+C(year)[T.2019]                              0.0034      0.018      0.189      0.850      -0.032       0.038
+C(year)[T.2020]                              0.0027      0.018      0.152      0.879      -0.032       0.037
+C(year)[T.2021]                              0.0613      0.016      3.881      0.000       0.030       0.092
+C(year)[T.2022]                              0.2687      0.015     17.410      0.000       0.238       0.299
+C(year)[T.2023]                              0.3360      0.015     21.790      0.000       0.306       0.366
+C(year)[T.2024]                              0.2350      0.016     15.071      0.000       0.204       0.266
+precipitation_mm                            -0.0025      0.001     -4.082      0.000      -0.004      -0.001
+temperature_mean_c                          -0.0130      0.003     -4.963      0.000      -0.018      -0.008
+==============================================================================
+Omnibus:                     5266.049   Durbin-Watson:                   1.792
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           205017.355
+Skew:                          -0.873   Prob(JB):                         0.00
+Kurtosis:                      20.352   Cond. No.                     1.35e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.35e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

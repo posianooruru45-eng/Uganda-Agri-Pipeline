@@ -1,0 +1,18 @@
+timestamp,stage,source,step,column,rows_before,rows_after,rows_affected,reason
+2026-10-15T11:32:16,clean,owid,filter_to_uganda,Entity,358,2,356,Raw file contained 180 countries; project is Uganda-only
+2026-10-15T12:19:11,clean,worldbank,drop_redundant_columns,*,66,66,0,Columns constant across all rows add no information
+2026-10-15T23:41:50,clean,worldbank,drop_redundant_columns,*,66,66,0,Columns constant across all rows add no information
+2026-10-16T09:56:45,clean,owid,filter_to_uganda,Entity,358,2,356,Raw file contained 180 countries; project is Uganda-only
+2026-10-16T09:56:46,clean,worldbank,drop_redundant_columns,*,66,66,0,Columns constant across all rows add no information
+2026-10-16T09:56:46,clean,worldbank,cap_outliers_crop_index,crop_index,66,66,0,"Capped 2 outliers to [26.72, 150.63] using IQR k=1.5"
+2026-10-16T09:56:46,clean,weather,cap_outliers_precipitation_mm,precipitation_mm,2557,2557,0,"Capped 117 outliers to [-7.15, 13.25] using IQR k=1.5"
+2026-10-16T09:56:46,clean,weather,cap_outliers_temperature_mean_c,temperature_mean_c,2557,2557,0,"Capped 8 outliers to [18.25, 24.25] using IQR k=1.5"
+2026-10-16T09:56:46,clean,weather,missing_value_report,*,2557,2557,0,0 missing values across all columns after cleaning
+2026-10-16T09:56:46,clean,wfp,cap_outliers_price,price,34328,34328,0,"Capped 3417 outliers to [-2344.50, 7107.50] using IQR k=1.5"
+2026-10-16T11:22:29,clean,owid,filter_to_uganda,Entity,358,2,356,Raw file contained 180 countries; project is Uganda-only
+2026-10-16T11:22:29,clean,worldbank,drop_redundant_columns,*,66,66,0,Columns constant across all rows add no information
+2026-10-16T11:22:29,clean,worldbank,cap_outliers_crop_index,crop_index,66,66,0,"Capped 3 outliers to [25.83, 154.36] using IQR k=1.5"
+2026-10-16T11:22:29,clean,weather,cap_outliers_precipitation_mm,precipitation_mm,2557,2557,0,"Capped 117 outliers to [-7.15, 13.25] using IQR k=1.5"
+2026-10-16T11:22:29,clean,weather,cap_outliers_temperature_mean_c,temperature_mean_c,2557,2557,0,"Capped 8 outliers to [18.25, 24.25] using IQR k=1.5"
+2026-10-16T11:22:29,clean,weather,missing_value_report,*,2557,2557,0,0 missing values across all columns after cleaning
+2026-10-16T11:22:30,clean,wfp,cap_outliers_price,price,34328,34328,0,"Capped 3417 outliers to [-2344.50, 7107.50] using IQR k=1.5"

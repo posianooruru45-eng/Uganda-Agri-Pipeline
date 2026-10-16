@@ -1,0 +1,44 @@
+VALIDATION REPORT — Phase 5: Integrate and Validate
+======================================================================
+Total rows evaluated: 34328
+Rows passed all rules: 16179
+Rows quarantined (failed >= 1 rule): 18149
+Pass rate: 47.1%
+
+Rule   Category           Severity     Failures  Description
+----------------------------------------------------------------------
+V01    Completeness       Critical            0  price must not be null
+V02    Completeness       Critical            0  date must not be null
+V03    Completeness       Critical         4897  district must not be null
+V04    Completeness       Major               0  commodity must not be null
+V05    Completeness       Minor           12591  precipitation_mm must not be null
+V06    Completeness       Minor           12591  temperature_mean_c must not be null
+V07    Uniqueness         Critical         7936  No duplicate WFP market-date-commodity rows
+V08    Uniqueness         Major            7936  No duplicate WFP market-date-commodity-priceflag rows
+V10    Range              Critical            0  price must be >= 0
+V11    Range              Major               0  price must be <= 100,000 UGX (upper sanity bound)
+V12    Range              Major           12591  precipitation_mm must be >= 0
+V13    Range              Major           12591  precipitation_mm must be <= 500 mm/day (physical upper bound)
+V14    Range              Major           12591  temperature_mean_c must be between 10 and 40 (Uganda climate range)
+V15    Range              Minor               0  crop_index must be >= 0 if present
+V16    Range              Minor               0  cereal_yield must be >= 0 if present
+V17    Range              Major               0  latitude must be between -2 and 5 (Uganda bounds)
+V18    Range              Major               0  longitude must be between 29 and 35 (Uganda bounds)
+V19    Referential Integrity Critical         4897  district must be a recognized Uganda district
+V20    Referential Integrity Major               0  commodity must not be empty string
+V21    Referential Integrity Major               0  currency must be UGX or USD
+V22    Referential Integrity Major               0  unit must not be null
+V23    Referential Integrity Minor               0  category must not be null
+V24    Cross-Field        Major               0  usdprice must be >= 0 if present
+V25    Cross-Field        Minor               0  priceflag must be 'actual' or 'provisional'
+V26    Cross-Field        Minor               0  pricetype must be 'Wholesale' or 'Retail'
+V27    Cross-Field        Minor               0  If currency is USD, usdprice should roughly equal price
+V28    Cross-Field        Major               0  market_id and market must not both be null
+V29    Cross-Field        Major               0  commodity_id and commodity must not both be null
+V30    Temporal           Critical        10790  date must be within project period 2015-01-01 to 2024-12-31
+V31    Temporal           Major           10790  year must be between 2015 and 2024 if present
+V32    Temporal           Critical            0  No future dates (after today)
+V33    Temporal           Minor               0  date must not be before 1900
+
+======================================================================
+End of validation report.

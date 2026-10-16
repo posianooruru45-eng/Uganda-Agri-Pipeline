@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uganda Agri-Pipeline — Analysis Dashboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  header { background: linear-gradient(135deg, #2c7a5b 0%, #1e5a3e 100%); color: white; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; }
+  header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  header p { font-size: 1rem; opacity: 0.9; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .kpi-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  .kpi-card h3 { font-size: 0.9rem; text-transform: uppercase; color: #666; margin-bottom: 0.5rem; }
+  .kpi-card .value { font-size: 2rem; font-weight: bold; color: #2c7a5b; }
+  .kpi-card .sub { font-size: 0.85rem; color: #888; margin-top: 0.25rem; }
+  .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+  .section h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #2c7a5b; border-bottom: 2px solid #2c7a5b; padding-bottom: 0.5rem; }
+  .chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .chart-placeholder { background: #f0f4f8; border: 2px dashed #ccc; border-radius: 8px; height: 200px; display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.9rem; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e0e0e0; }
+  th { background: #f8f9fa; font-weight: 600; color: #2c7a5b; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  .badge { display: inline-block; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  .badge-pass { background: #d4edda; color: #155724; }
+  .badge-fail { background: #f8d7da; color: #721c24; }
+  .badge-warn { background: #fff3cd; color: #856404; }
+  footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; margin-top: 2rem; }
+  .highlight { background: #e8f5e9; padding: 1rem; border-radius: 8px; border-left: 4px solid #2c7a5b; margin-bottom: 1rem; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Uganda Agriculture & Climate Data Pipeline</h1>
+    <p>Analysis Dashboard — Phase 8: Communicate</p>
+    <p><strong>Business Question:</strong> How do rainfall and conditions relate to staple food prices across Uganda?</p>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <h3>Validated Rows</h3>
+      <div class="value">16,179</div>
+      <div class="sub">of 34,328 total WFP observations (47.1% pass rate)</div>
+    </div>
+    <div class="kpi-card">
+      <h3>Districts</h3>
+      <div class="value">31</div>
+      <div class="sub">across Uganda</div>
+    </div>
+    <div class="kpi-card">
+      <h3>Commodities</h3>
+      <div class="value">37</div>
+      <div class="sub">staple foods tracked</div>
+    </div>
+    <div class="kpi-card">
+      <h3>Date Range</h3>
+      <div class="value">2018–2024</div>
+      <div class="sub">Jan 2018 to Dec 2024</div>
+    </div>
+    <div class="kpi-card">
+      <h3>R-Squared</h3>
+      <div class="value">0.889</div>
+      <div class="sub">regression model explanatory power</div>
+    </div>
+    <div class="kpi-card">
+      <h3>Validation Rules</h3>
+      <div class="value">33</div>
+      <div class="sub">data quality checks applied</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Key Findings</h2>
+    <div class="highlight">
+      <strong>Weather affects prices.</strong> Each additional mm of rainfall is associated with approximately 0.25% lower food prices, and each additional °C with approximately 1.29% lower prices (both p &lt; 0.001), controlling for commodity, district, and year.
+    </div>
+    <div class="highlight">
+      <strong>Commodity prices differ significantly.</strong> Prices vary significantly across commodities (ANOVA F = 4,074, p &lt; 0.001) — maize, rice, cassava, and beans have fundamentally different market dynamics.
+    </div>
+    <div class="highlight">
+      <strong>Season does not significantly affect prices.</strong> Wet vs. dry season price difference is not statistically significant (p = 0.616).
+    </div>
+    <div class="highlight">
+      <strong>District differences are not significant.</strong> Price differences across districts are not statistically significant (p = 0.460) after controlling for commodity.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Regression Model Results</h2>
+    <p><strong>Model:</strong> log(1 + price) ~ precipitation + temperature + commodity + district + year</p>
+    <p><strong>Observations:</strong> 16,179 | <strong>R-squared:</strong> 0.8889 | <strong>F-statistic:</strong> 1,740.99 (p &lt; 0.001)</p>
+    <table>
+      <thead>
+        <tr><th>Variable</th><th>Coefficient</th><th>p-value</th><th>Approx. Effect</th><th>Significant?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>precipitation_mm</td><td>-0.0025</td><td>&lt; 0.001</td><td>-0.25% price per mm</td><td><span class="badge badge-pass">Yes</span></td></tr>
+        <tr><td>temperature_mean_c</td><td>-0.0130</td><td>&lt; 0.001</td><td>-1.29% price per °C</td><td><span class="badge badge-pass">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Model Assumption Checks</h2>
+    <table>
+      <thead>
+        <tr><th>Check</th><th>Test</th><th>Result</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Linearity</td><td>Residuals vs fitted</td><td>Random scatter around zero</td><td><span class="badge badge-pass">PASS</span></td></tr>
+        <tr><td>Normality</td><td>Q-Q plot</td><td>Points follow diagonal line</td><td><span class="badge badge-pass">PASS</span></td></tr>
+        <tr><td>Homoscedasticity</td><td>Breusch-Pagan</td><td>p &lt; 0.001 (heteroscedastic)</td><td><span class="badge badge-fail">FAIL</span></td></tr>
+        <tr><td>Multicollinearity</td><td>VIF (max = 1.20)</td><td>VIF &lt; 5 threshold</td><td><span class="badge badge-pass">PASS</span></td></tr>
+        <tr><td>Autocorrelation</td><td>Durbin-Watson (1.79)</td><td>Within 1.5–2.5 range</td><td><span class="badge badge-pass">PASS</span></td></tr>
+      </tbody>
+    </table>
+    <p><em>Note:</em> Heteroscedasticity detected — use robust standard errors for inference.</p>
+  </div>
+
+  <div class="section">
+    <h2>Validation Summary</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Rules</th><th>Rows Passed</th><th>Rows Quarantined</th><th>Pass Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>All 33 rules</td><td>33</td><td>16,179</td><td>18,149</td><td>47.1%</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Top quarantine reasons:</strong> Date before 2015 (10,790 rows), duplicate market-date-commodity rows (7,936 rows), unrecognized district (4,897 rows).</p>
+  </div>
+
+  <div class="section">
+    <h2>Charts & Visualizations</h2>
+    <div class="chart-row">
+      <div class="chart-placeholder">01_price_distribution.png</div>
+      <div class="chart-placeholder">02_weather_distribution.png</div>
+      <div class="chart-placeholder">03_price_trend_by_commodity.png</div>
+      <div class="chart-placeholder">04_price_by_district.png</div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-placeholder">05_residuals_vs_fitted.png</div>
+      <div class="chart-placeholder">06_qq_plot.png</div>
+      <div class="chart-placeholder">07_rainfall_vs_price.png</div>
+      <div class="chart-placeholder">08_price_by_season.png</div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-placeholder">09_correlation_heatmap.png</div>
+    </div>
+    <p><em>Charts are saved as PNG files in <code>outputs/charts/</code>. Open them individually to view full resolution.</em></p>
+  </div>
+
+  <div class="section">
+    <h2>Recommendations</h2>
+    <ol>
+      <li>Collect district-level weather data rather than using Kampala-only weather for all districts.</li>
+      <li>Use robust standard errors (e.g., HC3) to address heteroscedasticity in regression inference.</li>
+      <li>Investigate pre-2015 WFP data if the project scope is extended beyond 2015–2024.</li>
+      <li>Add more districts to the canonical district list as WFP expands coverage.</li>
+      <li>Consider time-series models (e.g., SARIMA) to capture seasonal price cycles more explicitly.</li>
+    </ol>
+  </div>
+
+  <footer>
+    <p>Uganda Agriculture and Climate Data Pipeline — Phase 8: Communicate</p>
+    <p>Repository: https://github.com/posianooruru45-eng/Uganda-Agri-Pipeline.git</p>
+    <p>Data sources: World Bank (CC-BY 4.0), Open-Meteo (CC-BY 4.0), Our World in Data (CC-BY 4.0), WFP (CC-BY-IGO 3.0)</p>
+  </footer>
+</div>
+
+</body>
+</html>

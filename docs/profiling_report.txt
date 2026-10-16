@@ -1,0 +1,187 @@
+DATA PROFILING REPORT
+======================================================================
+
+======================================================================
+DATASET: World Bank
+File: data/raw\worldbank_crop_index_2026-10-16.json
+======================================================================
+
+Shape: 66 rows x 10 columns
+
+Columns and dtypes:
+countryiso3code        str
+date                   str
+value              float64
+unit                   str
+obs_status             str
+decimal              int64
+indicator.id           str
+indicator.value        str
+country.id             str
+country.value          str
+dtype: object
+
+Missing values per column:
+       missing_count  missing_pct
+value              2          3.0
+
+Duplicate rows: 0
+
+Summary stats (numeric columns):
+            value  decimal
+count   64.000000     66.0
+mean    92.616094      1.0
+std     28.605088      0.0
+min     43.360000      1.0
+25%     74.027500      1.0
+50%     90.295000      1.0
+75%    106.160000      1.0
+max    161.860000      1.0
+
+Unique value counts (first 10 columns):
+  countryiso3code: 1 unique values
+  date: 66 unique values
+  value: 64 unique values
+  unit: 1 unique values
+  obs_status: 1 unique values
+  decimal: 1 unique values
+  indicator.id: 1 unique values
+  indicator.value: 1 unique values
+  country.id: 1 unique values
+  country.value: 1 unique values
+
+======================================================================
+DATASET: Weather
+File: data/raw\weather_kampala_2026-10-16.json
+======================================================================
+
+Shape: 2557 rows x 3 columns
+
+Columns and dtypes:
+time                       str
+precipitation_sum      float64
+temperature_2m_mean    float64
+dtype: object
+
+Missing values per column:
+Empty DataFrame
+Columns: [missing_count, missing_pct]
+Index: []
+
+Duplicate rows: 0
+
+Summary stats (numeric columns):
+       precipitation_sum  temperature_2m_mean
+count        2557.000000          2557.000000
+mean            3.805827            21.297145
+std             5.215886             1.028417
+min             0.000000            18.400000
+25%             0.500000            20.500000
+50%             2.000000            21.200000
+75%             5.600000            22.000000
+max           127.000000            24.900000
+
+Unique value counts (first 10 columns):
+  time: 2557 unique values
+  precipitation_sum: 209 unique values
+  temperature_2m_mean: 65 unique values
+
+======================================================================
+DATASET: OWID
+File: data/raw\owid_uganda_cereal_yield_2026-10-16.csv
+======================================================================
+
+Shape: 358 rows x 5 columns
+
+Columns and dtypes:
+Entity                                                      str
+Code                                                        str
+Year                                                      int64
+Cereals - Yield (tonnes per hectare)                    float64
+Cereals - Yield (tonnes per hectare) (Original Year)    float64
+dtype: object
+
+Missing values per column:
+                                                    missing_count  missing_pct
+Cereals - Yield (tonnes per hectare) (Original ...            357         99.7
+
+Duplicate rows: 0
+
+Summary stats (numeric columns):
+              Year  ...  Cereals - Yield (tonnes per hectare) (Original Year)
+count   358.000000  ...                                                1.0   
+mean   2019.474860  ...                                             2023.0   
+std       4.506228  ...                                                NaN   
+min    2015.000000  ...                                             2023.0   
+25%    2015.000000  ...                                             2023.0   
+50%    2015.000000  ...                                             2023.0   
+75%    2024.000000  ...                                             2023.0   
+max    2024.000000  ...                                             2023.0   
+
+[8 rows x 3 columns]
+
+Unique value counts (first 10 columns):
+  Entity: 180 unique values
+  Code: 180 unique values
+  Year: 2 unique values
+  Cereals - Yield (tonnes per hectare): 357 unique values
+  Cereals - Yield (tonnes per hectare) (Original Year): 1 unique values
+
+======================================================================
+DATASET: WFP Food Prices
+File: data/raw\wfp_food_prices_2026-10-16.csv
+======================================================================
+
+Shape: 34328 rows x 16 columns
+
+Columns and dtypes:
+date                str
+admin1              str
+admin2              str
+market              str
+market_id         int64
+latitude        float64
+longitude       float64
+category            str
+commodity           str
+commodity_id      int64
+unit                str
+priceflag           str
+pricetype           str
+currency            str
+price           float64
+usdprice        float64
+dtype: object
+
+Missing values per column:
+Empty DataFrame
+Columns: [missing_count, missing_pct]
+Index: []
+
+Duplicate rows: 0
+
+Summary stats (numeric columns):
+          market_id      latitude  ...         price      usdprice
+count  34328.000000  34328.000000  ...  34328.000000  34328.000000
+mean    4347.049377      1.654095  ...   3188.824076      0.885601
+std     2767.321455      1.459680  ...   3747.237874      1.014938
+min      257.000000     -1.250000  ...      2.000000      0.000570
+25%      264.000000      0.360000  ...   1200.000000      0.350000
+50%     6405.000000      1.710000  ...   2000.000000      0.580000
+75%     6411.000000      3.230000  ...   3563.000000      0.980000
+max     7957.000000      3.570000  ...  66608.000000     18.150000
+
+[8 rows x 6 columns]
+
+Unique value counts (first 10 columns):
+  date: 248 unique values
+  admin1: 37 unique values
+  admin2: 40 unique values
+  market: 43 unique values
+  market_id: 43 unique values
+  latitude: 41 unique values
+  longitude: 41 unique values
+  category: 8 unique values
+  commodity: 38 unique values
+  commodity_id: 38 unique values
+
